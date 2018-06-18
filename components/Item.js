@@ -1,20 +1,20 @@
 import React, { Component } from 'react';
-import { View, Text, StyleSheet, Image } from 'react-native';
+import { View, Text, StyleSheet, Image, TouchableOpacity } from 'react-native';
 
 export default class Item extends Component {
   render(){
     return (
       <View style={styles.item}>
-        <View style={styles.leftSection}>
-          <Text style={styles.itemName}>{this.props.name}</Text>
-          <Text>{this.props.price}€</Text>
-        </View>
+          <View style={styles.leftSection}>
+            <Text style={styles.itemName}>{this.props.name}</Text>
+            <Text>{this.props.price}€</Text>
+          </View>
 
-        <View style={styles.rightSection}>
-          <Image
-            source={{ uri: this.props.image }}
-            style={styles.itemImage}/>
-        </View>
+          <View style={styles.rightSection}>
+            <Image
+              source={{ uri: this.props.image }}
+              style={styles.itemImage}/>
+          </View>
       </View>
     )
   }
